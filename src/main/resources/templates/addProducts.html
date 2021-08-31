@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add new product</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body background="/2987486.jpg">
+
+<h1>Add new product</h1>
+
+<form action="/addProduct" method="post">
+  <table>
+    <thead>
+    <tr>
+      <th colspan="2"> Enter the information below </th>
+    </tr>
+    </thead>
+    <tr>
+      <td><label> Enter name here</label></td>
+      <td><input type="text" name="name" placeholder="Name" required></td>
+    </tr>
+    <tr>
+      <td><label> Enter email here</label></td>
+      <td><input type="number" name="price" placeholder="Price" required ></td>
+
+  </table>
+  <br/>
+  <input id="btn" style="position: absolute; bottom:68%; left: 46%; width: 120px" type="submit" value="Add new product"
+         onclick="alert('You have successfully added a new product.')">
+
+</form>
+
+
+</body>
+</html>

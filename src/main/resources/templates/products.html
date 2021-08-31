@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>KEA webshop opgave</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body background="/2987486.jpg">
+
+<h1>List of products</h1>
+<table>
+    <thead>
+    <tr>
+        <th> Products ID </th>
+        <th> Name </th>
+        <th> Price </th>
+        <th> Buttons </th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="product: ${products}">
+        <td th:text="${product.productID}"></td>
+        <td th:text="${product.name}"></td>
+        <td th:text="${product.price}"></td>
+
+        <td>
+                <a class="deleteBtn" th:href="@{'/deleteProduct/'+${product.productID}}">
+                    <button type="submit" class="deleteBtn"> Delete product </button>
+                </a>
+
+            <a class="editBtn" th:href="@{'/editProduct/'+${product.productID}}">
+                <button type="submit" class="editBtn"> Edit product </button>
+            </a>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+
+<form action="/addProductsGet" method="get" style="position: absolute; left: 25%; bottom: 80%">
+<button id="btn">Add new product</button>
+</form>
+
+</body>
+</html>

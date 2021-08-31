@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit product</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body background="/2987486.jpg">
+
+<form action="/editProduct" method="post">
+    <h1>Edit the information below</h1>
+
+    <table>
+
+        <th colspan="2" style="text-align: center">Update the information below</th>
+
+        <tr>
+            <td><label>Customer ID</label></td>
+            <td><input type="text" name="productID" th:value="${product.productID}" readonly/></td>
+        </tr>
+
+        <tr>
+            <td><label>Enter name</label></td>
+            <td><input type="text" name="name" th:value="${product.name}" required/></td>
+        </tr>
+
+        <tr>
+            <td><label>Enter name</label></td>
+            <td><input type="text" name="price" th:value="${product.price}" required/></td>
+        </tr>
+
+
+    </table>
+    <input class="editBtn" style="position: absolute; bottom:65%; left: 46%; width: 120px" type="submit"
+           value="Update product" onclick="alert('You have successfully updated the product.')"/>
+</form>
+
+
+</body>
+</html>
