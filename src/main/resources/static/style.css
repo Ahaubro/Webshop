@@ -27,6 +27,7 @@ td, th {
 th {
     background-color: beige;
     border-top: none;
+    font-size: 21px;
 }
 
 td:first-child, th:first-child {
